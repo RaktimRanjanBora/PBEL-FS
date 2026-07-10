@@ -1,25 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grid Layout</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grid Boxes</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    width:850px;
+    border:1px solid #000;
+    padding:20px;
+    display:grid;
+    grid-template-columns:repeat(4,100px);
+    justify-content:space-around;
+    row-gap:30px;
+}
+
+.box{
+    width:90px;
+    height:90px;
+    background:yellowgreen;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:18px;
+    font-weight:bold;
+}
+</style>
+
 </head>
 <body>
 
-    <div class="container">
-        <div class="box">Box1</div>
-        <div class="box">Box2</div>
-        <div class="box">Box3</div>
-        <div class="box">Box4</div>
-        <div class="box">Box5</div>
-        <div class="box">Box6</div>
-        <div class="box">Box7</div>
-        <div class="box">Box8</div>
-        <div class="box">Box9</div>
-        <div class="box">Box10</div>
-    </div>
+<div class="container">
+    <div class="box">Box1</div>
+    <div class="box">Box2</div>
+    <div class="box">Box3</div>
+    <div class="box">Box4</div>
+
+    <div class="box">Box5</div>
+    <div class="box">Box6</div>
+    <div class="box">Box7</div>
+    <div class="box">Box8</div>
+
+    <div class="box">Box9</div>
+    <div class="box">Box10</div>
+</div>
 
 </body>
 </html>
