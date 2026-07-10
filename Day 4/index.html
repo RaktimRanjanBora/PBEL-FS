@@ -1,37 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flex Box</title>
 
-    <style>
-    
-        .container{
-            border: 1px solid gray;
-            width: 25%;
-            height: 200px;
-            margin: auto;
-            text-align: center;
-            border-radius: 10px;
-            background-color: #F0F0F0;
-            color: blue;
-        }
-    </style>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Times New Roman, serif;
+    text-align:center;
+    background:#fff;
+}
+
+h1{
+    margin:25px 0;
+}
+
+.container{
+    width:470px;
+    margin:auto;
+    border:1px solid gray;
+    padding:12px;
+}
+
+.row{
+    display:flex;
+    justify-content:space-evenly;
+    margin-bottom:12px;
+}
+
+.row3{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+}
+
+.box{
+    width:72px;
+    height:72px;
+    background:#9ACD32;
+    border-radius:4px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:13px;
+    box-shadow:-6px 6px 8px hotpink;
+}
+</style>
+
 </head>
 <body>
 
-    <div class="container">
-        <div>
-            <div></div>
-            <div></div>
-        </div>
+<h1>Flex Box</h1>
 
-        <div>
-            <div></div>
-            <div></div>
-        </div>
+<div class="container">
+
+    <div class="row">
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+        <div class="box">Box</div>
     </div>
+
+    <div class="row">
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+    </div>
+
+    <div class="row3">
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+    </div>
+
+</div>
 
 </body>
 </html>
