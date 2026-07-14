@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Complete Corporate Website</title>
+<style>
+*{  
+    margin:0;  
+    padding:0;  
+    box-sizing:border-box;  
+    font-family:Arial, Helvetica, sans-serif;  
+}  
+  
+body{  
+    background:#f5f5f5;  
+    scroll-behavior: smooth;
+}  
+  
+/* Navbar */  
+nav{  
+    width:100%;  
+    height:80px;  
+    background:teal;  
+    display:flex;  
+    justify-content:space-between;  
+    align-items:center;  
+    padding:0 40px;  
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}  
+  
+#logo h2{  
+    color:white;  
+}  
+  
+#menu{  
+    display:flex;  
+    gap:40px;  
+}  
+  
+#menu a{  
+    color:white;  
+    text-decoration:none;  
+    font-size:18px;  
+    font-weight:bold;  
+}  
+  
+#menu a:hover{  
+    color:yellow;  
+}  
+  
+/* Banner / Home Section */  
+#banner{  
+    width:90%;  
+    margin:40px auto;  
+    display:flex;  
+    justify-content:space-between;  
+    align-items:center;  
+    gap:30px;  
+}  
+  
+#child1,  
+#child2{  
+    width:48%;  
+}  
+  
+#child1 h1{  
+    font-size:50px;  
+    margin-bottom:20px;  
+}  
+  
+#child1 span{  
+    color:yellowgreen;  
+}  
+  
+#child1 p{  
+    font-size:18px;  
+    line-height:1.7;  
+}  
+  
+#child2 img{  
+    width:100%;  
+    border-radius:10px;  
+}  
+
+/* Global Section Title Helper */
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    color: teal;
+    margin: 60px 0 20px 0;
+}
+
+/* About Section */
+#about {
+    width: 90%;
+    margin: 40px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+}
+
+#about p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-features {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.about-box {
+    flex: 1;
+    background: #e6f2f2;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid teal;
+}
+
+.about-box h4 {
+    color: teal;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+  
+/* Grid / Core Showcase */  
+#grid{  
+    width:90%;  
+    margin:30px auto;  
+    display:grid;  
+    grid-template-columns:repeat(4,1fr);  
+    gap:30px;  
+}  
+  
+#grid div{  
+    background:white;  
+    padding:20px;  
+    border-radius:10px;  
+    text-align:center;  
+    box-shadow:0 5px 10px rgba(0,0,0,.2);  
+}  
+  
+#grid img{  
+    width:180px;  
+    height:180px;  
+    object-fit: contain;
+}  
+
+/* Services Cards Section */
+#services {
+    width: 90%;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.service-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card .icon-placeholder {
+    width: 70px;
+    height: 70px;
+    background: teal;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    margin: 0 auto 20px auto;
+    font-weight: bold;
+}
+
+.service-card h3 {
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.service-card p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+}
+  
+/* Pricing */  
+#price{  
+    width:90%;  
+    margin:40px auto;  
+    display:flex;  
+    justify-content:space-between;  
+    gap:20px;  
+}  
+  
+#price div{  
+    flex:1;  
+    background:white;  
+    padding:30px;  
+    border-radius:10px;  
+    text-align:center;  
+    box-shadow:0 5px 10px rgba(0,0,0,.2);  
+}  
+  
+#price h2{  
+    color:teal;  
+    margin-bottom:20px;  
+}  
+  
+#price p{  
+    margin-bottom:20px;  
+}  
+  
+#price h3{  
+    font-size:35px;  
+    margin-bottom:20px;  
+}  
+  
+button{  
+    padding:12px 25px;  
+    border:none;  
+    background:teal;  
+    color:white;  
+    border-radius:5px;  
+    cursor:pointer;  
+    font-size:16px;  
+}  
+  
+button:hover{  
+    background:darkcyan;  
+}  
+
+/* Contact Section Grid Container */
+#contact {
+    width: 90%;
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.contact-form-container {
+    width: 55%;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+}
+
+.contact-form-container .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.contact-form-container input,
+.contact-form-container textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-info-container {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.info-block {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+}
+
+.info-block h4 {
+    color: teal;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.info-block p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* Footer Section */
+footer {
+    width: 100%;
+    background: teal;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+    font-weight: bold;
+}
+  
+/* Responsive Styles */  
+@media(max-width:768px){  
+  
+#banner{  
+    flex-direction:column;  
+}  
+  
+#child1,  
+#child2{  
+    width:100%;  
+}  
+  
+#grid{  
+    grid-template-columns:repeat(2,1fr);  
+}
+
+#services {
+    grid-template-columns: 1fr;
+}
+  
+#price{  
+    flex-direction:column;  
+}  
+
+#contact {
+    flex-direction: column;
+}
+
+.contact-form-container,
+.contact-info-container {
+    width: 100%;
+}
+
+.about-features {
+    flex-direction: column;
+}
+  
+nav{  
+    flex-direction:column;  
+    height:auto;  
+    padding:20px;  
+}  
+  
+#menu{  
+    margin-top:15px;  
+    flex-wrap:wrap;  
+    justify-content:center;  
+}  
+}  
+
+@media(max-width: 480px) {
+    #grid {
+        grid-template-columns: 1fr;
+    }
+    #child1 h1 {
+        font-size: 35px;
+    }
+}
+</style>  
+</head>  
+<body>  
+
+  <!-- Navbar Section -->
+  <nav>  
+    <div id="logo">  
+      <h2>CorporateLogo</h2>  
+    </div>  
+    <div id="menu">  
+      <a href="#banner">Home</a>  
+      <a href="#about">About</a>  
+      <a href="#services-head">Services</a>  
+      <a href="#price-head">Pricing</a>  
+      <a href="#contact-head">Contact</a>  
+    </div>  
+  </nav>  
+
+  <!-- Home / Banner Section -->
+  <section id="banner">  
+    <div id="child1">  
+      <h1>Welcome to Our <span>Awesome</span> Website</h1>  
+      <p>  
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.  
+        Minima ipsa unde tempora aut facilis assumenda quas  
+        voluptates animi architecto illum.  
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.  
+        Ipsum fuga nobis odio dolor ullam atque magni voluptates.  
+      </p>  
+    </div>  
+    <div id="child2">  
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScDAlSCcIOEKLEiWKyMuWJl9fGYHZU8nAQgnsyB73or0h1RAkkKbBZlYqy&s=10" alt="Bike">  
+    </div>  
+  </section>  
+
+  <!-- About Section Component -->
+  <h2 class="section-title" id="about">About Our Company</h2>
+  <section id="about">
+    <p>We are a forward-thinking digital innovation company dedicated to transforming modern businesses through technology. Over the past decade, we have scaled complex infrastructure solutions, built cloud architecture, and shipped reliable automation pipelines globally.</p>
+    <p>Our focus lies completely on optimization, scaling architecture natively, and delivering beautiful user interfaces with rigid logic safety. We curate experiences that scale gracefully across platforms.</p>
+    
+    <div class="about-features">
+      <div class="about-box">
+        <h4>Custom Software</h4>
+        <p>Enterprise grade secure desktop, cross-platform mobile apps, and deep analytical frameworks designed exactly for your custom business workflows.</p>
+      </div>
+      <div class="about-box">
+        <h4>SAAS Architecture</h4>
+        <p>Building high-volume multi-tenant scalable software-as-a-service distributions from database structure planning to deployment.</p>
+      </div>
+      <div class="about-box">
+        <h4>Cloud Infrastructure</h4>
+        <p>Managing migrations, zero-downtime microservice operations, automated continuous integration pipelines, and strict security monitoring environments.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Showcase Section -->
+  <h2 class="section-title">Our Dynamic Gallery</h2>
+  <section id="grid">  
+    <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVY5ghSKityCk7RcR__p8hy4X_M6UxNDS5bNvglt-BfazhJ8nkm-HegOIA&s=10" alt="Showcase"></div>  
+    <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVY5ghSKityCk7RcR__p8hy4X_M6UxNDS5bNvglt-BfazhJ8nkm-HegOIA&s=10" alt="Showcase"></div>  
+    <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVY5ghSKityCk7RcR__p8hy4X_M6UxNDS5bNvglt-BfazhJ8nkm-HegOIA&s=10" alt="Showcase"></div>  
+    <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVY5ghSKityCk7RcR__p8hy4X_M6UxNDS5bNvglt-BfazhJ8nkm-HegOIA&s=10" alt="Showcase"></div>  
+    <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVY5ghSKityCk7RcR__p8hy4X_M6UxNDS5bNvglt-BfazhJ8nkm-HegOIA&s=10" alt="Showcase"></div>  
+    <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVY5ghSKityCk7RcR__p8hy4X_M6UxNDS5bNvglt-BfazhJ8nkm-HegOIA&s=10" alt="Showcase"></div>  
+    <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVY5ghSKityCk7RcR__p8hy4X_M6UxNDS5bNvglt-BfazhJ8nkm-HegOIA&s=10" alt="Showcase"></div>  
+    <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVY5ghSKityCk7RcR__p8hy4X_M6UxNDS5bNvglt-BfazhJ8nkm-HegOIA&s=10" alt="Showcase"></div>  
+  </section>  
+
+  <!-- Services Section Component -->
+  <h2 class="section-title" id="services-head">Services We Provide</h2>
+  <section id="services">
+    <div class="service-card">
+      <div class="icon-placeholder">W</div>
+      <h3>Web Development</h3>
+      <p>High performance responsive websites tailored perfectly using modern standards. Fully optimized for speed, accessibility and core web vitals ranking metrics.</p>
+    </div>
+    <div class="service-card">
+      <div class="icon-placeholder">A</div>
+      <h3>App Development</h3>
+      <p>Native iOS and Android application creation. Smooth frame transitions, offline-first architectures, structured database layer systems, and clean UI.</p>
+    </div>
+    <div class="service-card">
+      <div class="icon-placeholder">U</div>
+      <h3>UI/UX Architecture</h3>
+      <p>Deep prototyping, wireframes, interaction analysis and rigorous dynamic user experience flows designed to boost conversion rates and clean navigation loops.</p>
+    </div>
+    <div class="service-card">
+      <div class="icon-placeholder">D</div>
+      <h3>Digital Marketing</h3>
+      <p>Strategic data analytics marketing campaigns, technical content distribution pipelines, and comprehensive organic search optimization workflows.</p>
+    </div>
+    <div class="service-card">
+      <div class="icon-placeholder">C</div>
+      <h3>Cyber Security</h3>
+      <p>Comprehensive code base threat analysis, end-to-end user encryption protocols, access control lists validation, and regular routine penetration testing schedules.</p>
+    </div>
+    <div class="service-card">
+      <div class="icon-placeholder">B</div>
+      <h3>Business Consulting</h3>
+      <p>Helping modern startup enterprises restructure architectural roadmaps, resolve continuous engineering roadblocks, and streamline workflow tracking systems.</p>
+    </div>
+  </section>
+
+  <!-- Pricing Plan Section -->
+  <h2 class="section-title" id="price-head">Flexible Pricing Plans</h2>
+  <section id="price">  
+    <div>  
+      <h2>Basic</h2>  
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>  
+      <h3>$10</h3>  
+      <button>Buy Now</button>  
+    </div>  
+    <div>  
+      <h2>Standard</h2>  
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>  
+      <h3>$20</h3>  
+      <button>Buy Now</button>  
+    </div>  
+    <div>  
+      <h2>Premium</h2>  
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>  
+      <h3>$30</h3>  
+      <button>Buy Now</button>  
+    </div>  
+  </section>  
+
+  <!-- Contact Section Component -->
+  <h2 class="section-title" id="contact-head">Get In Touch With Us</h2>
+  <section id="contact">
+    <div class="contact-form-container">
+      <form action="#" onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+        <div class="form-group">
+          <label for="name">Your Full Name</label>
+          <input type="text" id="name" required placeholder="John Doe">
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" required placeholder="john@example.com">
+        </div>
+        <div class="form-group">
+          <label for="message">Message Details</label>
+          <textarea id="message" rows="6" required placeholder="Write down your queries here..."></textarea>
+        </div>
+        <button type="submit">Submit Inquiry</button>
+      </form>
+    </div>
+
+    <div class="contact-info-container">
+      <div class="info-block">
+        <h4>Primary Office (HQ)</h4>
+        <p><strong>Address:</strong> 102 Innovation Tower, Tech District, Sector 62</p>
+        <p><strong>Phone:</strong> +1 (555) 019-2834</p>
+        <p><strong>Email:</strong> hq@awesomecorp.com</p>
+      </div>
+      
+      <div class="info-block">
+        <h4>Regional Branch Office</h4>
+        <p><strong>Address:</strong> Suite 404, Capital Business Park, Outer Circle</p>
+        <p><strong>Phone:</strong> +1 (555) 014-9982</p>
+        <p><strong>Email:</strong> branch@awesomecorp.com</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Site Footer -->
+  <footer>
+    <p>&copy; 2026 Awesome Corporate Website Solution. All Rights Reserved.</p>
+  </footer>
+
+</body>  
+</html>
