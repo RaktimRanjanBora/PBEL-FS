@@ -1,0 +1,326 @@
+JavaScript Assignment
+Session 1 Practice Questions & Solutions Reference Guide
+Topic: Variables, Operators, Conditionals, Arrays & Output Prediction 
+Part 1: Variables and Data Types
+1.1 Create two variables named firstName and lastName and print your full name.
+SOLUTION & CODE:
+let firstName = "Raktim";
+let lastName = "Bora";
+console.log(`${firstName} ${lastName}`);
+CONSOLE OUTPUT:
+Raktim Bora
+1.2 Create a variable age and store your age in it. Print the value and its data type.
+SOLUTION & CODE:
+let age = 21;
+
+console.log("Value:", age);
+console.log("Type:", typeof age);
+CONSOLE OUTPUT:
+Value: 21
+Type: number
+1.3 Create variables of type string, number, boolean, undefined, and null. Print their data types.
+SOLUTION & CODE:
+let strVar = "Hello World";
+let numVar = 42;
+let boolVar = true;
+let undefVar;
+let nullVar = null;
+
+console.log("strVar type:", typeof strVar);
+console.log("numVar type:", typeof numVar);
+console.log("boolVar type:", typeof boolVar);
+console.log("undefVar type:", typeof undefVar);
+console.log("nullVar type:", typeof nullVar);
+CONSOLE OUTPUT:
+strVar type: string
+numVar type: number
+boolVar type: boolean
+undefVar type: undefined
+nullVar type: object
+
+Explanation: In JavaScript, typeof null returns 'object'. This is a well-known historical bug in JavaScript that was kept for backward compatibility.
+1.4 Create two numbers and print their sum, difference, product, and division.
+SOLUTION & CODE:
+let num1 = 20;
+let num2 = 5;
+
+let sum = num1 + num2;
+let diff = num1 - num2;
+let prod = num1 * num2;
+let div = num1 / num2;
+
+console.log("Sum:", sum);
+console.log("Difference:", diff);
+console.log("Product:", prod);
+console.log("Division:", div);
+CONSOLE OUTPUT:
+Sum: 25
+Difference: 15
+Product: 100
+Division: 4
+1.5 Create a variable price = 99.99 and print its data type.
+SOLUTION & CODE:
+let price = 99.99;
+console.log(typeof price);
+CONSOLE OUTPUT:
+number
+1.6 Predict the output of console.log(typeof null) and console.log(typeof undefined).
+SOLUTION & CODE:
+console.log(typeof null);       // "object"
+console.log(typeof undefined);  // "undefined"
+
+Explanation: 1. typeof null evaluates to 'object' because of how variables were represented in early JS engines (null was stored as a pointer, sharing the object tag).
+2. typeof undefined evaluates to 'undefined' because undefined has its own spec-defined type.
+Part 2: Comparison Operators
+2.1 Create two variables and check ==, ===, !=, !==, >, <, >=, and <=.
+SOLUTION & CODE:
+let a = 15;
+let b = '15';
+
+console.log("a == b  :", a == b);   // Loose equality
+console.log("a === b :", a === b);  // Strict equality
+console.log("a != b  :", a != b);
+console.log("a !== b :", a !== b);
+console.log("a > b   :", a > b);
+console.log("a < b   :", a < b);
+console.log("a >= b  :", a >= b);
+console.log("a <= b  :", a <= b);
+CONSOLE OUTPUT:
+a == b  : true
+a === b : false
+a != b  : false
+a !== b : true
+a > b   : false
+a < b   : false
+a >= b  : true
+a <= b  : true
+2.2 Predict the output of console.log(10 == '10') and console.log(10 === '10').
+SOLUTION & CODE:
+console.log(10 == '10');   // true
+console.log(10 === '10');  // false
+
+Explanation: The loose equality operator (==) performs type coercion to match the types before checking value. The strict operator (===) checks both type and value without performing any coercion.
+2.3 Predict the output of console.log(null == undefined) and console.log(null === undefined).
+SOLUTION & CODE:
+console.log(null == undefined);  // true
+console.log(null === undefined); // false
+
+Explanation: The JS spec explicitly dictates that loose equality between null and undefined evaluates to true. Under strict equality, they are distinct, separate types and evaluate to false.
+2.4 Write a program to compare the ages of two people and print who is older.
+SOLUTION & CODE:
+let agePerson1 = 25;
+let agePerson2 = 30;
+
+if (agePerson1 > agePerson2) {
+    console.log("Person 1 is older.");
+} else if (agePerson2 > agePerson1) {
+    console.log("Person 2 is older.");
+} else {
+    console.log("Both are of the same age.");
+}
+CONSOLE OUTPUT:
+Person 2 is older.
+
+Part 3: Conditional Statements
+3.1 Write a program to check whether a number is positive or negative.
+SOLUTION & CODE:
+let number = -15;
+
+if (number > 0) {
+    console.log(`${number} is positive.`);
+} else if (number < 0) {
+    console.log(`${number} is negative.`);
+} else {
+    console.log("The number is zero.");
+}
+CONSOLE OUTPUT:
+-15 is negative.
+3.2 Write a program to check whether a student has passed or failed. Passing marks are 40.
+SOLUTION & CODE:
+let marks = 45;
+
+if (marks >= 40) {
+    console.log("Status: Passed");
+} else {
+    console.log("Status: Failed");
+}
+CONSOLE OUTPUT:
+Status: Passed
+3.3 Write a program to find the larger number between two numbers.
+SOLUTION & CODE:
+let numA = 45;
+let numB = 72;
+
+if (numA > numB) {
+    console.log("The larger number is:", numA);
+} else if (numB > numA) {
+    console.log("The larger number is:", numB);
+} else {
+    console.log("Both numbers are equal.");
+}
+CONSOLE OUTPUT:
+The larger number is: 72
+3.4 Write a program to find the largest among three numbers.
+SOLUTION & CODE:
+let n1 = 12, n2 = 85, n3 = 45;
+let largest;
+
+if (n1 >= n2 && n1 >= n3) {
+    largest = n1;
+} else if (n2 >= n1 && n2 >= n3) {
+    largest = n2;
+} else {
+    largest = n3;
+}
+
+console.log("The largest number is:", largest);
+CONSOLE OUTPUT:
+The largest number is: 85
+3.5 Write a program to check whether a number is even or odd.
+SOLUTION & CODE:
+let value = 14;
+
+if (value % 2 === 0) {
+    console.log(`${value} is even.`);
+} else {
+    console.log(`${value} is odd.`);
+}
+CONSOLE OUTPUT:
+14 is even.
+3.6 Write a program that prints grading categories based on marks.
+SOLUTION & CODE:
+let studentMarks = 82;
+
+if (studentMarks > 90) {
+    console.log("Excellent");
+} else if (studentMarks >= 75 && studentMarks <= 90) {
+    console.log("Good");
+} else if (studentMarks >= 50 && studentMarks < 75) {
+    console.log("Average");
+} else {
+    console.log("Fail");
+}
+CONSOLE OUTPUT:
+Good
+Part 4: Arrays
+4.1-4.5 Create a mixed array containing a string, number, boolean, null, and undefined, operate on elements, push, pop, and replace index elements.
+SOLUTION & CODE:
+// 1. Create mixed array
+let arr = ["JavaScript", 101, true, null, undefined];
+
+// 2. Print metadata
+console.log("First element:", arr[0]);
+console.log("Last element:", arr[arr.length - 1]);
+console.log("Array length:", arr.length);
+
+// 3. Push elements
+arr.push("React", "Node");
+console.log("After push:", arr);
+
+// 4. Pop element
+let poppedElement = arr.pop();
+console.log("Popped element:", poppedElement);
+console.log("After pop:", arr);
+
+// 5. Replace element
+arr[2] = "Guwahati";
+console.log("After replacing index 2:", arr);
+CONSOLE OUTPUT:
+First element: JavaScript
+Last element: undefined
+Array length: 5
+After push: [ 'JavaScript', 101, true, null, undefined, 'React', 'Node' ]
+Popped element: Node
+After pop: [ 'JavaScript', 101, true, null, undefined, 'React' ]
+After replacing index 2: [ 'JavaScript', 101, 'Guwahati', null, undefined, 'React' ]
+4.6 Create the array [10, 20, 30, 40, 50] and perform specified operations.
+SOLUTION & CODE:
+let numbers = [10, 20, 30, 40, 50];
+
+console.log("Initial length:", numbers.length);
+numbers.push(60);
+numbers.pop();
+numbers[2] = 100;
+
+console.log("Final array:", numbers);
+CONSOLE OUTPUT:
+Initial length: 5
+Final array: [ 10, 20, 100, 40, 50 ]
+4.7 Create nested array let data = [1, 2, [3, 4, 5], 6] and print 3, 5, and nested array length.
+SOLUTION & CODE:
+let data = [1, 2, [3, 4, 5], 6];
+
+let subArray = data[2];
+console.log("Value 3:", subArray[0]);  // data[2][0]
+console.log("Value 5:", subArray[2]);  // data[2][2]
+console.log("Length of nested array:", subArray.length);
+CONSOLE OUTPUT:
+Value 3: 3
+Value 5: 5
+Length of nested array: 3
+Part 5: Output Prediction
+5.1 Predict output for comparison of variables x = 10 and y = '10'.
+SOLUTION & CODE:
+let x = 10;
+let y = '10';
+console.log(x == y);  // true
+console.log(x === y); // false
+
+Explanation: x == y utilizes coercion and returns true because both represent numeric value ten. x === y checks type natively and returns false.
+5.2 Predict output: let arr = [1, 2, 3]; arr.push(4); arr.pop(); console.log(arr);
+SOLUTION & CODE:
+let arr = [1, 2, 3];
+arr.push(4);
+arr.pop();
+console.log(arr);
+CONSOLE OUTPUT:
+[1, 2, 3]
+
+Explanation: Push adds 4 to array end. Pop immediately removes the last element (4), leaving the array identical to start.
+5.3 Predict output: let arr = ['A', 'B', 'C']; arr[1] = 'Z'; console.log(arr);
+SOLUTION & CODE:
+let arr = ['A', 'B', 'C'];
+arr[1] = 'Z';
+console.log(arr);
+CONSOLE OUTPUT:
+['A', 'Z', 'C']
+
+Challenge Questions:
+C.1 Create an array of 10 elements and replace every even index with 'JavaScript'.
+SOLUTION & CODE:
+let challengeArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+for (let i = 0; i < challengeArr.length; i++) {
+    if (i % 2 === 0) {
+        challengeArr[i] = 'JavaScript';
+    }
+}
+console.log(challengeArr);
+CONSOLE OUTPUT:
+[ 'JavaScript', 1, 'JavaScript', 3, 'JavaScript', 5, 'JavaScript', 7, 'JavaScript', 9 ]
+
+
+C.2 Create three variables: name, age, and city, and print a complete sentence using them.
+SOLUTION & CODE:
+let name = "Raktim";
+let currentAge = 21;
+let city = "Guwahati";
+
+let sentence = `My name is ${name}, I am ${currentAge} years old, and I live in ${city}.`;
+console.log(sentence);
+CONSOLE OUTPUT:
+My name is Raktim, I am 21 years old, and I live in Guwahati.
+
+C.3 Create an array with mixed data types and count the number of elements without using length.
+SOLUTION & CODE:
+let mixedArray = ["Apple", true, 42, null, { name: "Raktim" }, [1, 2]];
+let count = 0;
+
+for (let element of mixedArray) {
+    count++;
+}
+
+console.log("Counted elements:", count);
+CONSOLE OUTPUT:
+Counted elements: 6
+
