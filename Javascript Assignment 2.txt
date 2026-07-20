@@ -1,0 +1,564 @@
+JavaScript Assignment Solutions:
+Comprehensive Problem Set Solutions • Complete Code & Execution Outputs
+Part A: Conditions and Operators
+1. Even or Odd Checker
+JAVASCRIPT CODE:
+function checkEvenOdd(num) {
+  if (num % 2 === 0) {
+    console.log('Even');
+  } else {
+    console.log('Odd');
+  }
+}
+
+checkEvenOdd(14);
+checkEvenOdd(7);
+
+OUTPUT:
+Even
+Odd
+
+2. FizzBuzz (Divisibility by 3 and 7)
+JAVASCRIPT CODE:
+function fizzBuzz(num) {
+  if (num % 3 === 0 && num % 7 === 0) {
+    console.log('FizzBuzz');
+  } else if (num % 3 === 0) {
+    console.log('Fizz');
+  } else if (num % 7 === 0) {
+    console.log('Buzz');
+  }
+}
+
+fizzBuzz(21);
+fizzBuzz(9);
+fizzBuzz(14);
+
+OUTPUT:
+FizzBuzz
+Fizz
+Buzz
+
+3. Find Greatest of Three Numbers
+JAVASCRIPT CODE:
+function findGreatest(a, b, c) {
+  if (a >= b && a >= c) {
+    console.log(a);
+  } else if (b >= a && b >= c) {
+    console.log(b);
+  } else {
+    console.log(c);
+  }
+}
+
+findGreatest(12, 45, 32);
+
+OUTPUT:
+45
+
+4. Student Pass/Fail Status
+JAVASCRIPT CODE:
+function checkStatus(marks) {
+  if (marks >= 40) {
+    console.log('Pass');
+  } else {
+    console.log('Fail');
+  }
+}
+
+checkStatus(58);
+checkStatus(35);
+
+OUTPUT:
+Pass
+Fail
+
+5. Prediction of Logical Operators (&& and ||)
+JAVASCRIPT CODE:
+console.log(true && false);
+console.log(true || false);
+console.log(0 && "hello");
+console.log(5 || "world");
+
+OUTPUT:
+false
+true
+0
+5
+Explanation: && returns the first falsy value or the last truthy value. || returns the first truthy value.
+
+Part B: Strings
+1. Print All Vowels from 'JavaScript is awesome'
+JAVASCRIPT CODE:
+let str1 = 'JavaScript is awesome';
+let vowels = 'aeiouAEIOU';
+
+for (let i = 0; i < str1.length; i++) {
+  if (vowels.includes(str1[i])) {
+    console.log(str1[i]);
+  }
+}
+
+OUTPUT:
+a
+a
+i
+i
+a
+e
+o
+e
+
+2. Count Vowels in 'Masai School'
+JAVASCRIPT CODE:
+let str2 = 'Masai School';
+let count = 0;
+let targetVowels = 'aeiouAEIOU';
+
+for (let i = 0; i < str2.length; i++) {
+  if (targetVowels.includes(str2[i])) {
+    count++;
+  }
+}
+
+console.log(count);
+
+OUTPUT:
+5
+
+3. Print Every Character of 'Full Stack Development'
+JAVASCRIPT CODE:
+let str3 = 'Full Stack Development';
+
+for (let i = 0; i < str3.length; i++) {
+  console.log(str3[i]);
+}
+
+OUTPUT:
+F
+u
+l
+l
+ 
+S
+t
+a
+c
+k
+ 
+D
+e
+v
+e
+l
+o
+p
+m
+e
+n
+t
+
+4. Count Spaces in 'We are learning JavaScript'
+JAVASCRIPT CODE:
+let str4 = 'We are learning JavaScript';
+let spaceCount = 0;
+
+for (let i = 0; i < str4.length; i++) {
+  if (str4[i] === ' ') {
+    spaceCount++;
+  }
+}
+
+console.log(spaceCount);
+
+OUTPUT:
+3
+
+5. Reverse the String 'Hello'
+JAVASCRIPT CODE:
+let str5 = 'Hello';
+let reversed = '';
+
+for (let i = str5.length - 1; i >= 0; i--) {
+  reversed += str5[i];
+}
+
+console.log(reversed);
+
+OUTPUT:
+olleh
+
+Part C: Loops
+1. Print Numbers from 1 to 20 (for loop)
+JAVASCRIPT CODE:
+for (let i = 1; i <= 20; i++) {
+  console.log(i);
+}
+
+OUTPUT:
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+
+2. Print Numbers from 20 to 1 (while loop)
+JAVASCRIPT CODE:
+let w = 20;
+while (w >= 1) {
+  console.log(w);
+  w--;
+}
+
+OUTPUT:
+20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1
+
+3. Multiplication Table of 7
+JAVASCRIPT CODE:
+for (let i = 1; i <= 10; i++) {
+  console.log(`7 * ${i} = ${7 * i}`);
+}
+
+OUTPUT:
+7 * 1 = 7
+7 * 2 = 14
+7 * 3 = 21
+7 * 4 = 28
+7 * 5 = 35
+7 * 6 = 42
+7 * 7 = 49
+7 * 8 = 56
+7 * 9 = 63
+7 * 10 = 70
+
+4. Print All Even Numbers from 1 to 50
+JAVASCRIPT CODE:
+for (let i = 2; i <= 50; i += 2) {
+  console.log(i);
+}
+
+OUTPUT:
+2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50
+
+5. Sum of All Numbers from 1 to 100
+JAVASCRIPT CODE:
+let totalSum = 0;
+for (let i = 1; i <= 100; i++) {
+  totalSum += i;
+}
+console.log(totalSum);
+
+OUTPUT:
+5050
+
+Part D: Arrays
+1. Array Operations (push, pop, length, update)
+JAVASCRIPT CODE:
+let arr = [10, 20, 30, 40, 50];
+
+arr.push(60);
+console.log("After push:", arr);
+
+arr.pop();
+console.log("After pop:", arr);
+
+console.log("Length:", arr.length);
+
+arr[1] = 25;
+console.log("After update:", arr);
+
+OUTPUT:
+After push: [10, 20, 30, 40, 50, 60]
+After pop: [10, 20, 30, 40, 50]
+Length: 5
+After update: [10, 25, 30, 40, 50]
+
+2. Iterate over Fruits using for...of Loop
+JAVASCRIPT CODE:
+let fruits = ['Apple', 'Mango', 'Banana', 'Orange'];
+
+for (let fruit of fruits) {
+  console.log(fruit);
+}
+
+OUTPUT:
+Apple
+Mango
+Banana
+Orange
+
+3. Find Largest Number in Array
+JAVASCRIPT CODE:
+let numbers = [23, 56, 89, 12, 100, 45];
+let maxNum = numbers[0];
+
+for (let i = 1; i < numbers.length; i++) {
+  if (numbers[i] > maxNum) {
+    maxNum = numbers[i];
+  }
+}
+
+console.log(maxNum);
+
+OUTPUT:
+100
+
+4. Sum of All Elements in Array
+JAVASCRIPT CODE:
+let elementSum = [5, 10, 15, 20, 25].reduce((acc, curr) => acc + curr, 0);
+console.log(elementSum);
+
+OUTPUT:
+75
+
+5. Count Even Numbers in Array
+JAVASCRIPT CODE:
+let countArr = [2, 5, 8, 11, 14, 17, 20];
+let evenCount = countArr.filter(n => n % 2 === 0).length;
+
+console.log(evenCount);
+
+OUTPUT:
+4
+
+Part E: Objects and for...in
+1 & 2. Print Keys and Values from a Student Object
+JAVASCRIPT CODE:
+let student = { name: "Raktim", age: 21, university: "Gauhati University" };
+
+console.log("Keys:");
+for (let key in student) {
+  console.log(key);
+}
+
+console.log("Values:");
+for (let key in student) {
+  console.log(student[key]);
+}
+
+OUTPUT:
+Keys:
+name
+age
+university
+Values:
+Raktim
+21
+Gauhati University
+
+3. Find Subject with Minimum Marks
+JAVASCRIPT CODE:
+let marks = { Math: 85, Science: 42, English: 78, History: 39 };
+let minSubject = "";
+let minMark = Infinity;
+
+for (let sub in marks) {
+  if (marks[sub] < minMark) {
+    minMark = marks[sub];
+    minSubject = sub;
+  }
+}
+
+console.log(minSubject);
+
+OUTPUT:
+History
+
+4. Count Total Properties in an Object
+JAVASCRIPT CODE:
+let obj = { a: 1, b: 2, c: 3, d: 4 };
+let propCount = 0;
+
+for (let k in obj) {
+  propCount++;
+}
+
+console.log(propCount);
+
+OUTPUT:
+4
+
+5. Prediction of Iterating via for...in
+OUTPUT:
+Prediction Output:
+Iterates over keys: 'a', 'b', 'c', 'd'
+Explanation: The for...in loop iterates over all enumerable string properties of an object (including inherited ones). Keys are accessed as strings.
+
+Part F: Functions
+1. Function to Print Sum of Two Numbers
+JAVASCRIPT CODE:
+function printSum(a, b) {
+  console.log(a + b);
+}
+
+printSum(15, 25);
+
+OUTPUT:
+40
+
+2. Function to Print Square of a Number
+JAVASCRIPT CODE:
+function printSquare(num) {
+  console.log(num * num);
+}
+
+printSquare(8);
+
+OUTPUT:
+64
+
+3. Arrow Function to Print Average of Three Numbers
+JAVASCRIPT CODE:
+const printAvg = (a, b, c) => console.log((a + b + c) / 3);
+
+printAvg(10, 20, 30);
+
+OUTPUT:
+20
+
+4. Function to Print Length of a String
+JAVASCRIPT CODE:
+function printLength(str) {
+  console.log(str.length);
+}
+
+printLength("Hello World");
+
+OUTPUT:
+11
+
+5. Function to Print Greater of Two Numbers
+JAVASCRIPT CODE:
+function printGreater(a, b) {
+  console.log(a > b ? a : b);
+}
+
+printGreater(45, 89);
+
+OUTPUT:
+89
+
+Part G: Variables (let, const, var)
+1. Using Variable Before Declaration with var
+JAVASCRIPT CODE:
+console.log(x);
+var x = 10;
+
+OUTPUT:
+undefined
+Explanation: Due to variable hoisting, the declaration 'var x' is moved to the top of its scope and initialized with 'undefined'.
+
+2. Using Variable Before Declaration with let
+JAVASCRIPT CODE:
+console.log(y);
+let y = 5;
+
+OUTPUT:
+ReferenceError: Cannot access 'y' before initialization
+Explanation: 'let' variables are hoisted but remain in the Temporal Dead Zone (TDZ) until execution reaches their declaration.
+
+3. Modifying a const Variable
+JAVASCRIPT CODE:
+const z = 100;
+z = 200;
+
+OUTPUT:
+TypeError: Assignment to constant variable.
+
+4. Differences Table (var, let, const)
+Feature	var	let	const
+Scope	Function scoped	Block scoped	Block scoped
+Hoisting	Hoisted (initialized as undefined)	Hoisted (Temporal Dead Zone)	Hoisted (Temporal Dead Zone)
+Re-assignment	Allowed	Allowed	Not Allowed
+
+Challenge Questions:
+1. Find Second Largest Number in an Array
+JAVASCRIPT CODE:
+function secondLargest(arr) {
+  let uniqueArr = [...new Set(arr)].sort((a, b) => b - a);
+  return uniqueArr[1];
+}
+
+console.log(secondLargest([10, 20, 45, 45, 99, 99, 4]));
+
+OUTPUT:
+45
+
+2. Count Vowels and Consonants in 'Programming'
+JAVASCRIPT CODE:
+let word = 'Programming'.toLowerCase();
+let vCount = 0, cCount = 0;
+let vList = 'aeiou';
+
+for (let char of word) {
+  if (vList.includes(char)) vCount++;
+  else if (char >= 'a' && char <= 'z') cCount++;
+}
+
+console.log(`Vowels: ${vCount}, Consonants: ${cCount}`);
+
+OUTPUT:
+Vowels: 3, Consonants: 8
+
+3. Student Object Information Print
+JAVASCRIPT CODE:
+let fullStudent = {
+  name: "Raktim Ranjan Bora",
+  age: 21,
+  university: "Gauhati University",
+  subjects: ["DSA", "Java OOP", "DBMS"],
+  hobbies: ["Coding", "Graphic Design"]
+};
+
+console.log(JSON.stringify(fullStudent, null, 2));
+
+OUTPUT:
+{
+  "name": "Raktim Ranjan Bora",
+  "age": 21,
+  "university": "Gauhati University",
+  "subjects": [
+    "DSA",
+    "Java OOP",
+    "DBMS"
+  ],
+  "hobbies": [
+    "Coding",
+    "Graphic Design"
+  ]
+}
+
+4. Prime Number Checker Function
+JAVASCRIPT CODE:
+function isPrime(n) {
+  if (n <= 1) return false;
+  for (let i = 2; i <= Math.sqrt(n); i++) {
+    if (n % i === 0) return false;
+  }
+  return true;
+}
+
+console.log(isPrime(17));
+console.log(isPrime(4));
+
+OUTPUT:
+true
+false
+
+5. String Reversal Function
+JAVASCRIPT CODE:
+function reverseStr(str) {
+  return str.split('').reverse().join('');
+}
+
+console.log(reverseStr("JavaScript"));
+
+OUTPUT:
+tpircSavaJ
+
+6. Filter Student Names Starting with 'A'
+JAVASCRIPT CODE:
+let studentList = ['Amit', 'Raktim', 'Anshu', 'Rahul', 'Aman'];
+let filtered = studentList.filter(name => name.startsWith('A'));
+
+console.log(filtered);
+
+OUTPUT:
+[ 'Amit', 'Anshu', 'Aman' ]
+
